@@ -1,0 +1,35 @@
+<%- include('./partials/header') -%>
+<script src="/script/modules.js"></script>
+<section class="main">
+    <div class="transparent"></div>
+    <div class="parent-box">
+        <div class="box">
+            <h3><%= heading %></h3>
+            <% tasks.forEach(task => { %>
+                <div class="task">
+                    <p class="bullet">&bullet;  </p>
+                    <% if(task.completed) { %>
+                        <p id="task" class="striked" name="task"><%= task.task %></p>
+                    <% } else { %>
+                        <p id="task" name="task"><%= task.task %></p>
+                    <% } %>
+                    <div class="btns">
+                        <form class="btn-form" action="/<%= heading %>/delete" method="post">
+                            <button id="red" type="submit" name="delete" value="<%= task._id %>" onclick="this.form.submit()" class="red-btn btn">delete</button>
+                        </form>
+                        <form class="btn-form" action="/<%= heading %>/done" method="post">
+                            <button id="<%= task._id %>" type="submit" value="<%= task._id %>" name="done" class="green-btn btn" onclick="this.form.submit()">done</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        <div class="insertion">
+            <form class="task-insertion" action="/<%= heading %>-todo" method="post">
+                <input type="text" name="task" id="" placeholder="New Task" autocomplete="off">
+                <button type="submit" name="list" value="<%= listType %>">+</button>
+            </form>
+        </div>
+    </div>
+</section>
+<%- include('./partials/footer') -%>
