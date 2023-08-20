@@ -4,7 +4,7 @@ const ejs = require('ejs');
 const _ = require('lodash');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://harshinivk12:todo123@mytodo.jf25cgm.mongodb.net/?retryWrites=true&w=majority');
+mongoose.connect('mongodb://localhost:27017/todolist'); // 27017 is the default port number for MongoDB
 
 const app = express();
 
