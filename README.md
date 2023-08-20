@@ -1,6 +1,6 @@
 # mytodo
 
-*NOTE:*<br>
+**NOTE**:<br>
 `You must have installed and set up MongoDB on your device for the todo list to function dynamically.`
 <br>
 <br>
