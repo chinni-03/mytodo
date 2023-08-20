@@ -1,5 +1,10 @@
 # mytodo
 
+*NOTE:*<br>
+`You must have installed and set up MongoDB on your device for the todo list to function dynamically.`
+<br>
+<br>
+
 Click on `code` and download the files in a zip format and extract them, or you can download them and open in the following manner through hyper terminal and open it in VS code:
 
 `git clone https://github.com/chinni-03/mytodo.git`
